@@ -1,39 +1,23 @@
-pragma solidity ^0.4.6;
+pragma solidity ^0.4.16;
 
 contract Calculator {
 
   uint result;
 
-  function Calculator() {
-    // constructor
-    result=10;
-  }
+ function Calculator() public {
+     result = 10;
+ }
 
-  // returns the result
-  function getResult() constant returns (uint){
-    return result;
-  }
-
-  // result = result + num
-  function addToNumber(uint num) returns (uint) {
+  function addToNumber(uint num) public {
     result += num;
-    return result;
   }
-
-  // result = result - num
-  function substractFromNumber(uint num) returns (uint) {
+  
+  function subtractFromNumber(uint num) public {
     result -= num;
-    return result;
   }
-
-  // result = result * num
-  function multiplyWithNumber(uint num) returns (uint) {
-    return result;
+  
+  function getAnswer() public constant returns (uint) {
+      return result;
   }
-
-  // result = result / num
-  function divideNumberBy(uint num) returns (uint) {
-    return result;
-  }
-
+  
 }
